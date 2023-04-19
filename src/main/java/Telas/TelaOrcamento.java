@@ -126,7 +126,7 @@ public class TelaOrcamento extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new TelaOrcamento(this, true).setVisible(true);
+                new TelaOrcamento(null, true).setVisible(true);
             }
         });
     }

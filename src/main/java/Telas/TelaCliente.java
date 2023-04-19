@@ -3,25 +3,24 @@ package Telas;
 
 import Banco.BancoJPA;
 import Model.Cliente;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class TelaCliente extends javax.swing.JFrame {
 
     public TelaCliente(MenuPrincipal aThis, boolean par) {
         initComponents();
+        atualizaTabela();
     }
 
-    private TelaCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Cadastrar = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -34,6 +33,8 @@ public class TelaCliente extends javax.swing.JFrame {
         FEmail = new javax.swing.JTextField();
         FTelefone = new javax.swing.JTextField();
         FCPF = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -43,19 +44,6 @@ public class TelaCliente extends javax.swing.JFrame {
                 CadastrarActionPerformed(evt);
             }
         });
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
 
         jButton1.setText("Editar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +87,19 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,9 +108,9 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,13 +175,33 @@ public class TelaCliente extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(FCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void atualizaTabela(){
+        String[] ColumNames = new String[]{"id","Nome","Endereco","Email","CPF"};
+        
+        BancoJPA banco = new BancoJPA();
+        Cliente cliente = new Cliente();
+        List<Cliente>dados = banco.listar(cliente);
+        
+        Object[][] data = new Object[dados.size()][ColumNames.length];
+        
+        for(int i  = 0; i< dados.size(); i++){
+            data[i][0]=dados.get(i).getId();
+            data[i][1]=dados.get(i).getName();
+            data[i][2]=dados.get(i).getEndereco();
+            data[i][3]=dados.get(i).getEmail();
+            data[i][4]=dados.get(i).getCPF();    
+        }
+        
+        DefaultTableModel modelo = new DefaultTableModel(data, ColumNames);
+        jTable1.setModel(modelo);
+    }
     private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
       if(evt.getSource().equals(Cadastrar)){
           Cliente cliente = new Cliente();
@@ -192,7 +213,7 @@ public class TelaCliente extends javax.swing.JFrame {
           
           BancoJPA banco = new BancoJPA();
           banco.inserir(cliente);
-          
+          atualizaTabela();
           JOptionPane.showMessageDialog(rootPane, "Cliente Salvo com Sucesso");   
       }else{
           JOptionPane.showMessageDialog(rootPane, "Erro ao incluir o Cliente");
@@ -248,8 +269,9 @@ public class TelaCliente extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaCliente().setVisible(true);
+            public void run() {                
+                new TelaCliente(null,true).setVisible(true);
+                
             }
      
         });
@@ -269,7 +291,7 @@ public class TelaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
