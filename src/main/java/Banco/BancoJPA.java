@@ -19,6 +19,20 @@ public class BancoJPA {
         em.close();
     }
     
+    public void remove(Object o){
+        etx.begin();
+        em.remove(o);
+        etx.commit();
+        em.close();
+    }
+    
+    public void update(Object o){
+        etx.begin();
+        em.merge(o);
+        etx.commit();
+        em.close();
+    }
+    
     public List listar (Object o){
         Query query = em.createQuery("SELECT o FROM "+o.getClass().getSimpleName()+" o");
         return query.getResultList();

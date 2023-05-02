@@ -21,13 +21,13 @@ public class TelaCliente extends javax.swing.JFrame {
     private void initComponents() {
 
         Cadastrar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        BTEditar = new javax.swing.JButton();
+        BTExcluir = new javax.swing.JButton();
+        JNome = new javax.swing.JLabel();
+        JEndereco = new javax.swing.JLabel();
+        JEmail = new javax.swing.JLabel();
+        JTelefone = new javax.swing.JLabel();
+        JCPF = new javax.swing.JLabel();
         FNome = new javax.swing.JTextField();
         FEndereco = new javax.swing.JTextField();
         FEmail = new javax.swing.JTextField();
@@ -45,47 +45,29 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Editar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BTEditar.setText("Editar");
+        BTEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BTEditarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Excluir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BTExcluir.setText("Excluir");
+        BTExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BTExcluirActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Nome:");
+        JNome.setText("Nome:");
 
-        jLabel2.setText("Endereco:");
+        JEndereco.setText("Endereco:");
 
-        jLabel3.setText("Email:");
+        JEmail.setText("Email:");
 
-        jLabel4.setText("Telefone:");
+        JTelefone.setText("Telefone:");
 
-        jLabel5.setText("CPF:");
-
-        FNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FNomeActionPerformed(evt);
-            }
-        });
-
-        FTelefone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FTelefoneActionPerformed(evt);
-            }
-        });
-
-        FCPF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FCPFActionPerformed(evt);
-            }
-        });
+        JCPF.setText("CPF:");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,17 +96,17 @@ public class TelaCliente extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
+                                    .addComponent(JTelefone)
+                                    .addComponent(JCPF))
                                 .addGap(10, 10, 10)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(FTelefone)
                                     .addComponent(FCPF)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
+                                    .addComponent(JNome)
+                                    .addComponent(JEndereco)
+                                    .addComponent(JEmail))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(FEmail)
@@ -137,8 +119,8 @@ public class TelaCliente extends javax.swing.JFrame {
                                 .addGap(15, 15, 15))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(BTEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                                    .addComponent(BTExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap())))))
         );
         layout.setVerticalGroup(
@@ -147,35 +129,34 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(BTExcluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
+                        .addComponent(BTEditar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Cadastrar)
                         .addGap(25, 25, 25))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
+                            .addComponent(JNome)
                             .addComponent(FNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
+                            .addComponent(JEndereco)
                             .addComponent(FEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
+                            .addComponent(JEmail)
                             .addComponent(FEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(JTelefone)
                             .addComponent(FTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(JCPF)
                             .addComponent(FCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -220,25 +201,13 @@ public class TelaCliente extends javax.swing.JFrame {
       }
     }//GEN-LAST:event_CadastrarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BTEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTEditarActionPerformed
+        
+    }//GEN-LAST:event_BTEditarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void FNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FNomeActionPerformed
-
-    private void FCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FCPFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FCPFActionPerformed
-
-    private void FTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FTelefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FTelefoneActionPerformed
+    }//GEN-LAST:event_BTExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,19 +247,19 @@ public class TelaCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTEditar;
+    private javax.swing.JButton BTExcluir;
     private javax.swing.JButton Cadastrar;
     private javax.swing.JTextField FCPF;
     private javax.swing.JTextField FEmail;
     private javax.swing.JTextField FEndereco;
     private javax.swing.JTextField FNome;
     private javax.swing.JTextField FTelefone;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel JCPF;
+    private javax.swing.JLabel JEmail;
+    private javax.swing.JLabel JEndereco;
+    private javax.swing.JLabel JNome;
+    private javax.swing.JLabel JTelefone;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
