@@ -17,10 +17,6 @@ public class TelaCliente extends javax.swing.JFrame {
         initComponents();
     }
 
-    TelaCliente(MenuPrincipal aThis, boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,224 +26,21 @@ public class TelaCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        jPanel1 = new javax.swing.JPanel();
-=======
-        Cadastrar = new javax.swing.JButton();
-        BTEditar = new javax.swing.JButton();
-        BTExcluir = new javax.swing.JButton();
-        JNome = new javax.swing.JLabel();
-        JEndereco = new javax.swing.JLabel();
-        JEmail = new javax.swing.JLabel();
-        JTelefone = new javax.swing.JLabel();
-        JCPF = new javax.swing.JLabel();
-        FNome = new javax.swing.JTextField();
-        FEndereco = new javax.swing.JTextField();
-        FEmail = new javax.swing.JTextField();
-        FTelefone = new javax.swing.JTextField();
-        FCPF = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
->>>>>>> 59a702f15ea5df29ee6a65b086617eed59ca1345
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-<<<<<<< HEAD
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 583, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 177, Short.MAX_VALUE)
-        );
-=======
-        Cadastrar.setText("Cadastrar");
-        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CadastrarActionPerformed(evt);
-            }
-        });
-
-        BTEditar.setText("Editar");
-        BTEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTEditarActionPerformed(evt);
-            }
-        });
-
-        BTExcluir.setText("Excluir");
-        BTExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTExcluirActionPerformed(evt);
-            }
-        });
-
-        JNome.setText("Nome:");
-
-        JEndereco.setText("Endereco:");
-
-        JEmail.setText("Email:");
-
-        JTelefone.setText("Telefone:");
-
-        JCPF.setText("CPF:");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
->>>>>>> 59a702f15ea5df29ee6a65b086617eed59ca1345
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 500, Short.MAX_VALUE))
-=======
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(JTelefone)
-                                    .addComponent(JCPF))
-                                .addGap(10, 10, 10)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(FTelefone)
-                                    .addComponent(FCPF)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(JNome)
-                                    .addComponent(JEndereco)
-                                    .addComponent(JEmail))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(FEmail)
-                                    .addComponent(FEndereco)
-                                    .addComponent(FNome))))
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(Cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(15, 15, 15))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(BTEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                                    .addComponent(BTExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap())))))
->>>>>>> 59a702f15ea5df29ee6a65b086617eed59ca1345
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 470, Short.MAX_VALUE))
-=======
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(BTExcluir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTEditar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Cadastrar)
-                        .addGap(25, 25, 25))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JNome)
-                            .addComponent(FNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JEndereco)
-                            .addComponent(FEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JEmail)
-                            .addComponent(FEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JTelefone)
-                            .addComponent(FTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JCPF)
-                            .addComponent(FCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> 59a702f15ea5df29ee6a65b086617eed59ca1345
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-<<<<<<< HEAD
-=======
-    public void atualizaTabela(){
-        String[] ColumNames = new String[]{"id","Nome","Endereco","Email","CPF"};
-        
-        BancoJPA banco = new BancoJPA();
-        Cliente cliente = new Cliente();
-        List<Cliente>dados = banco.listar(cliente);
-        
-        Object[][] data = new Object[dados.size()][ColumNames.length];
-        
-        for(int i  = 0; i< dados.size(); i++){
-            data[i][0]=dados.get(i).getId();
-            data[i][1]=dados.get(i).getName();
-            data[i][2]=dados.get(i).getEndereco();
-            data[i][3]=dados.get(i).getEmail();
-            data[i][4]=dados.get(i).getCPF();    
-        }
-        
-        DefaultTableModel modelo = new DefaultTableModel(data, ColumNames);
-        jTable1.setModel(modelo);
-    }
-    private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
-      if(evt.getSource().equals(Cadastrar)){
-          Cliente cliente = new Cliente();
-          cliente.setName(FNome.getText());
-          cliente.setEndereco(FEndereco.getText());
-          cliente.setEmail(FEmail.getText());
-          cliente.setTelefone(FTelefone.getText());
-          cliente.setCPF(FCPF.getText());
-          
-          BancoJPA banco = new BancoJPA();
-          banco.inserir(cliente);
-          atualizaTabela();
-          JOptionPane.showMessageDialog(rootPane, "Cliente Salvo com Sucesso");   
-      }else{
-          JOptionPane.showMessageDialog(rootPane, "Erro ao incluir o Cliente");
-      }
-    }//GEN-LAST:event_CadastrarActionPerformed
-
-    private void BTEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTEditarActionPerformed
-        
-    }//GEN-LAST:event_BTEditarActionPerformed
-
-    private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BTExcluirActionPerformed
->>>>>>> 59a702f15ea5df29ee6a65b086617eed59ca1345
 
     /**
      * @param args the command line arguments
@@ -285,24 +78,5 @@ public class TelaCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
-    private javax.swing.JPanel jPanel1;
-=======
-    private javax.swing.JButton BTEditar;
-    private javax.swing.JButton BTExcluir;
-    private javax.swing.JButton Cadastrar;
-    private javax.swing.JTextField FCPF;
-    private javax.swing.JTextField FEmail;
-    private javax.swing.JTextField FEndereco;
-    private javax.swing.JTextField FNome;
-    private javax.swing.JTextField FTelefone;
-    private javax.swing.JLabel JCPF;
-    private javax.swing.JLabel JEmail;
-    private javax.swing.JLabel JEndereco;
-    private javax.swing.JLabel JNome;
-    private javax.swing.JLabel JTelefone;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
->>>>>>> 59a702f15ea5df29ee6a65b086617eed59ca1345
     // End of variables declaration//GEN-END:variables
 }
