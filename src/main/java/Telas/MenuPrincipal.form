@@ -93,9 +93,6 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="BTVeiculo">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\veiculo.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Veiculo"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -125,9 +122,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\caixa.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Caixa"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -141,9 +135,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="BTFuncionario">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\funcionario.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Funcionario"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -160,9 +151,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\OS.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="OS"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -179,9 +167,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="BTOrcamento">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\Or&#xe7;amento.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Or&#xe7;amentos"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -195,9 +180,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\user.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Usuarios"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -212,9 +194,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="BTCliente">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\Cliente.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Cliente"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -230,11 +209,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\165577.jpg"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

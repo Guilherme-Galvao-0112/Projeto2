@@ -179,7 +179,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTClienteActionPerformed
-        new TelaCliente().setVisible(true);
+        new TelaCliente(this, true).setVisible(true);
     }//GEN-LAST:event_BTClienteActionPerformed
 
     private void BTVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVeiculoActionPerformed
