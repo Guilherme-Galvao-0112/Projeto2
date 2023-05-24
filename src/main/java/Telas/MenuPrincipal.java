@@ -29,17 +29,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         BTVeiculo = new javax.swing.JButton();
         BTProdutos = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BTCaixa = new javax.swing.JButton();
         BTFuncionario = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        BTOS = new javax.swing.JButton();
         BTOrcamento = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        BTUsuarios = new javax.swing.JButton();
         BTCliente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        BTVeiculo.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\veiculo.png")); // NOI18N
+        BTVeiculo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/veiculo.png"))); // NOI18N
         BTVeiculo.setText("Veiculo");
         BTVeiculo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         BTVeiculo.addActionListener(new java.awt.event.ActionListener() {
@@ -57,16 +57,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\caixa.png")); // NOI18N
-        jButton4.setText("Caixa");
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BTCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/caixa.png"))); // NOI18N
+        BTCaixa.setText("Caixa");
+        BTCaixa.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BTCaixa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BTCaixaActionPerformed(evt);
             }
         });
 
-        BTFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\funcionario.png")); // NOI18N
+        BTFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/funcionario.png"))); // NOI18N
         BTFuncionario.setText("Funcionario");
         BTFuncionario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         BTFuncionario.setMargin(new java.awt.Insets(2, 0, 3, 15));
@@ -76,17 +76,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\OS.png")); // NOI18N
-        jButton2.setText("OS");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton2.setMargin(new java.awt.Insets(2, 0, 3, 14));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BTOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/OS.png"))); // NOI18N
+        BTOS.setText("OS");
+        BTOS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BTOS.setMargin(new java.awt.Insets(2, 0, 3, 14));
+        BTOS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BTOSActionPerformed(evt);
             }
         });
 
-        BTOrcamento.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\Orçamento.png")); // NOI18N
+        BTOrcamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Orçamento.png"))); // NOI18N
         BTOrcamento.setText("Orçamentos");
         BTOrcamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         BTOrcamento.addActionListener(new java.awt.event.ActionListener() {
@@ -95,17 +95,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\user.png")); // NOI18N
-        jButton1.setText("Usuarios");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton1.setIconTextGap(0);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BTUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
+        BTUsuarios.setText("Usuarios");
+        BTUsuarios.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BTUsuarios.setIconTextGap(0);
+        BTUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BTUsuariosActionPerformed(evt);
             }
         });
 
-        BTCliente.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\Cliente.png")); // NOI18N
+        BTCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Cliente.png"))); // NOI18N
         BTCliente.setText("Cliente");
         BTCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         BTCliente.setMargin(new java.awt.Insets(2, 5, 3, 0));
@@ -115,7 +115,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Pictures\\ProjetoOficina\\165577.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/165577.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,27 +123,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(BTCliente)
+                        .addComponent(BTCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(BTFuncionario)
+                        .addComponent(BTFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(BTProdutos)
+                        .addComponent(BTProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(BTVeiculo)
+                        .addComponent(BTVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BTOS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(BTOrcamento)
+                        .addComponent(BTOrcamento, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BTUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(BTCaixa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,11 +150,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(BTFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTVeiculo)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BTOS, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTOrcamento, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BTUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTCliente)
-                    .addComponent(jButton4))
+                    .addComponent(BTCaixa))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -179,7 +177,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTClienteActionPerformed
-        new TelaCliente().setVisible(true);
+        new TelaCliente(this, true).setVisible(true);
     }//GEN-LAST:event_BTClienteActionPerformed
 
     private void BTVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVeiculoActionPerformed
@@ -198,17 +196,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BTFuncionarioActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BTCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCaixaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BTCaixaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BTUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTUsuariosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BTUsuariosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTOSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BTOSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,14 +244,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTCaixa;
     private javax.swing.JButton BTCliente;
     private javax.swing.JButton BTFuncionario;
+    private javax.swing.JButton BTOS;
     private javax.swing.JButton BTOrcamento;
     private javax.swing.JButton BTProdutos;
+    private javax.swing.JButton BTUsuarios;
     private javax.swing.JButton BTVeiculo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

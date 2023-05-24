@@ -43,30 +43,27 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="BTCliente" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTCliente" min="-2" pref="115" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="BTFuncionario" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTFuncionario" min="-2" pref="129" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="BTProdutos" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTProdutos" min="-2" pref="124" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="BTVeiculo" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTVeiculo" min="-2" pref="95" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="79" max="-2" attributes="0"/>
+                          <Component id="BTOS" min="-2" pref="91" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="BTOrcamento" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTOrcamento" min="-2" pref="133" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="BTUsuarios" min="-2" pref="107" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jButton4" max="32767" attributes="0"/>
+                          <Component id="BTCaixa" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -77,11 +74,11 @@
                       <Component id="BTFuncionario" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="BTProdutos" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="BTVeiculo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="BTOS" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="BTOrcamento" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="BTUsuarios" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="BTCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BTCaixa" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -94,7 +91,7 @@
         <Component class="javax.swing.JButton" name="BTVeiculo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\veiculo.png"/>
+              <Image iconType="3" name="/veiculo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Veiculo"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -123,10 +120,10 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTProdutosActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="BTCaixa">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\caixa.png"/>
+              <Image iconType="3" name="/caixa.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Caixa"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -136,13 +133,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTCaixaActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BTFuncionario">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\funcionario.png"/>
+              <Image iconType="3" name="/funcionario.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Funcionario"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -158,10 +155,10 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTFuncionarioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="BTOS">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\OS.png"/>
+              <Image iconType="3" name="/OS.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="OS"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -174,13 +171,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTOSActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BTOrcamento">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\Or&#xe7;amento.png"/>
+              <Image iconType="3" name="/Or&#xe7;amento.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Or&#xe7;amentos"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -193,10 +190,10 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTOrcamentoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="BTUsuarios">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\user.png"/>
+              <Image iconType="3" name="/user.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Usuarios"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -207,13 +204,13 @@
             <Property name="iconTextGap" type="int" value="0"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTUsuariosActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BTCliente">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\Cliente.png"/>
+              <Image iconType="3" name="/Cliente.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cliente"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -232,7 +229,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\dell\Pictures\ProjetoOficina\165577.jpg"/>
+              <Image iconType="3" name="/165577.jpg"/>
             </Property>
           </Properties>
         </Component>
