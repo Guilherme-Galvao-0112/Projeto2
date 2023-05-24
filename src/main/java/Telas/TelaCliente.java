@@ -4,6 +4,10 @@
  */
 package Telas;
 
+import Banco.BancoJPA;
+import Model.Cliente;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dell
@@ -26,21 +30,199 @@ public class TelaCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JPanePrincipal = new javax.swing.JPanel();
+        JTNome = new javax.swing.JTextField();
+        JLNome = new javax.swing.JLabel();
+        JTEndereco = new javax.swing.JTextField();
+        JLEndereco = new javax.swing.JLabel();
+        JLEmail = new javax.swing.JLabel();
+        JTEmail = new javax.swing.JTextField();
+        JLTelefone = new javax.swing.JLabel();
+        JLCPF = new javax.swing.JLabel();
+        BTSalvar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        JTNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTNomeActionPerformed(evt);
+            }
+        });
+
+        JLNome.setText("Nome");
+
+        JTEndereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTEnderecoActionPerformed(evt);
+            }
+        });
+
+        JLEndereco.setText("Endereço");
+
+        JLEmail.setText("Email");
+
+        JTEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTEmailActionPerformed(evt);
+            }
+        });
+
+        JLTelefone.setText("Telefone");
+
+        JLCPF.setText("CPF");
+
+        BTSalvar.setText("Salvar");
+        BTSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTSalvarActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+
+        jButton3.setText("jButton3");
+
+        jButton4.setText("jButton4");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout JPanePrincipalLayout = new javax.swing.GroupLayout(JPanePrincipal);
+        JPanePrincipal.setLayout(JPanePrincipalLayout);
+        JPanePrincipalLayout.setHorizontalGroup(
+            JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                                    .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(JLTelefone)
+                                        .addComponent(JLCPF)
+                                        .addComponent(JLEmail))
+                                    .addGap(12, 12, 12))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanePrincipalLayout.createSequentialGroup()
+                                    .addComponent(JLEndereco)
+                                    .addGap(8, 8, 8)))
+                            .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                                .addComponent(JLNome)
+                                .addGap(24, 24, 24)))
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(JTEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JTEndereco, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JTNome, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                        .addComponent(BTSalvar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)
+                        .addGap(54, 54, 54))))
+        );
+        JPanePrincipalLayout.setVerticalGroup(
+            JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JLNome)
+                    .addComponent(JTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanePrincipalLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JLEndereco)
+                            .addComponent(JTEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanePrincipalLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLEmail))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLTelefone))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLCPF))))
+                .addGap(18, 18, 18)
+                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BTSalvar)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(JPanePrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(JPanePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BTSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTSalvarActionPerformed
+        if (evt.getSource().equals(BTSalvar)) {
+            Cliente cliente = new Cliente();
+            cliente.setName(JTNome.getText());
+            cliente.setEndereco(JTEndereco.getText());
+            cliente.setEmail(JTNome.getText());
+            cliente.setTelefone(JTNome.getText());
+            cliente.setCPF(JTNome.getText());
+            BancoJPA banco = new BancoJPA();
+            banco.inserir(cliente);
+            
+            JOptionPane.showMessageDialog(rootPane, "Cliente Adicionado");
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Erro ao Salvar");
+        }
+        
+
+    }//GEN-LAST:event_BTSalvarActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void JTNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTNomeActionPerformed
+
+    private void JTEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEnderecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTEnderecoActionPerformed
+
+    private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +260,20 @@ public class TelaCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTSalvar;
+    private javax.swing.JLabel JLCPF;
+    private javax.swing.JLabel JLEmail;
+    private javax.swing.JLabel JLEndereco;
+    private javax.swing.JLabel JLNome;
+    private javax.swing.JLabel JLTelefone;
+    private javax.swing.JPanel JPanePrincipal;
+    private javax.swing.JTextField JTEmail;
+    private javax.swing.JTextField JTEndereco;
+    private javax.swing.JTextField JTNome;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
