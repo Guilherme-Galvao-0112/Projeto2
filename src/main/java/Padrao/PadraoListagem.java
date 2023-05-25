@@ -5,6 +5,7 @@
 package Padrao;
 
 import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
 
         
@@ -19,7 +20,14 @@ public class PadraoListagem extends javax.swing.JDialog {
         atualiza();        
     }
     public void atualiza(){
-        dados = Repository.Listar()
+        dados = Repository.Listar(padrao.getClass(),"");
+        String columNames[] = padrao.getTitulo();
+        Object[][] data = new Object[dados.size()][columNames.length];
+        for(int i=0;i<dados.size();i++){
+            data[i]=padrao.getDados();
+        }
+        DefaultTableModel dataModel = new DefaultTableModel(data, columNames);
+        jTable1.setModel(dataModel);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
