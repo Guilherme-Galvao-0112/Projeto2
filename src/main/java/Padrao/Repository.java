@@ -4,7 +4,8 @@
  */
 package Padrao;
 
-import br.unigran.projetomecanica.app.dao.DAO;
+
+import Banco.BancoJPA;
 import java.util.List;
 
 /**
@@ -12,19 +13,13 @@ import java.util.List;
  * @author andre
  */
 public abstract class Repository {
-    private static final DAO dao;
+    private static final BancoJPA banco;
    
     static{        
-        dao = new DAO();
+        banco = new BancoJPA();
     }
-    
-    public static void salvar(Object objeto){
-        dao.salvar(objeto);
-    }
-    public static void remover(Object objeto){
-        dao.remove(objeto);
-    }
+ 
      public static List Listar(Class classe, String where){
-        return dao.lista(classe, where);
+        return banco.listar(classe, where);
     }
 }

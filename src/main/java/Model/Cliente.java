@@ -1,6 +1,7 @@
 
 package Model;
 
+import Padrao.PadraoListar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +10,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Cliente")
-public class Cliente{
+public class Cliente implements PadraoListar{
+
+    public Cliente() {
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer Id;
@@ -65,6 +69,18 @@ public class Cliente{
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
+    }
+    
+    @Override
+    public String[] getTitulo(){
+        return new String[]{"ID","Nome","Endereço","Email","Telefone","CPF"};
+    }
+    @Override
+    public Object[] getDados(){
+        return new Object[]{getId(),getName(),getEndereco(),getEmail(),getTelefone(),getCPF()};
+    }
+    public void AtualizaCliente(){
+        
     }
     
 }

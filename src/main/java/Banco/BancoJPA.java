@@ -35,7 +35,7 @@ public class BancoJPA {
     
     public List listar (Object o){
         Query query = em.createQuery("SELECT o FROM "+o.getClass().getSimpleName()+" o");
-        return query.getResultList();
+         return query.getResultList();
     }
     
     public void excluir (Object o){
