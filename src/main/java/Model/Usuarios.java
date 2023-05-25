@@ -4,11 +4,22 @@
  */
 package Model;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author dell
  */
-public class Usuarios {
+@Entity
+@Table(name = "Servicos")
+public class Usuarios implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer ID;
     private String Login;
     private String Senha;
