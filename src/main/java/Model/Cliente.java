@@ -1,27 +1,20 @@
 
 package Model;
 
-<<<<<<< HEAD
 import Padrao.PadraoListar;
-=======
 import java.io.Serializable;
->>>>>>> 816e5be5b80bc8e56c09dd793c1eeb5b67504e67
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import javax.persistence.GeneratedValue;
+
 @Entity
 @Table(name = "Cliente")
-<<<<<<< HEAD
-public class Cliente implements PadraoListar{
 
-    public Cliente() {
-    }
-=======
 public class Cliente implements Serializable{
->>>>>>> 816e5be5b80bc8e56c09dd793c1eeb5b67504e67
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer Id;
@@ -77,18 +70,5 @@ public class Cliente implements Serializable{
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
-    }
-    
-    @Override
-    public String[] getTitulo(){
-        return new String[]{"ID","Nome","Endereço","Email","Telefone","CPF"};
-    }
-    @Override
-    public Object[] getDados(){
-        return new Object[]{getId(),getName(),getEndereco(),getEmail(),getTelefone(),getCPF()};
-    }
-    public void AtualizaCliente(){
-        
-    }
-    
+    }  
 }

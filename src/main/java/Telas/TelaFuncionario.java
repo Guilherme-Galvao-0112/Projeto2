@@ -22,12 +22,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author dell
  */
-public class TelaCliente extends javax.swing.JFrame {
+public class TelaFuncionario extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaCliente
      */
-    public TelaCliente(MenuPrincipal aThis, boolean par) {
+    public TelaFuncionario(MenuPrincipal aThis, boolean par) {
         initComponents();
         atualiza();
 
