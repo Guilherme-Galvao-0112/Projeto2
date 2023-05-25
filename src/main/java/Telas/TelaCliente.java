@@ -6,7 +6,11 @@ package Telas;
 
 import Banco.BancoJPA;
 import Model.Cliente;
+import java.awt.FlowLayout;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -40,19 +44,13 @@ public class TelaCliente extends javax.swing.JFrame {
         JLTelefone = new javax.swing.JLabel();
         JLCPF = new javax.swing.JLabel();
         BTSalvar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BTAlterar = new javax.swing.JButton();
+        BTExcluir = new javax.swing.JButton();
+        BTPesquisar = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        JTNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTNomeActionPerformed(evt);
-            }
-        });
 
         JLNome.setText("Nome");
 
@@ -66,12 +64,6 @@ public class TelaCliente extends javax.swing.JFrame {
 
         JLEmail.setText("Email");
 
-        JTEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTEmailActionPerformed(evt);
-            }
-        });
-
         JLTelefone.setText("Telefone");
 
         JLCPF.setText("CPF");
@@ -83,14 +75,24 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("jButton2");
-
-        jButton3.setText("jButton3");
-
-        jButton4.setText("jButton4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BTAlterar.setText("Alterar");
+        BTAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BTAlterarActionPerformed(evt);
+            }
+        });
+
+        BTExcluir.setText("Excluir");
+        BTExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTExcluirActionPerformed(evt);
+            }
+        });
+
+        BTPesquisar.setText("Pesquisar");
+        BTPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTPesquisarActionPerformed(evt);
             }
         });
 
@@ -126,11 +128,11 @@ public class TelaCliente extends javax.swing.JFrame {
                     .addGroup(JPanePrincipalLayout.createSequentialGroup()
                         .addComponent(BTSalvar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)
+                        .addComponent(BTAlterar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3)
+                        .addComponent(BTExcluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4)
+                        .addComponent(BTPesquisar)
                         .addGap(54, 54, 54))))
         );
         JPanePrincipalLayout.setVerticalGroup(
@@ -163,9 +165,9 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTSalvar)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(BTAlterar)
+                    .addComponent(BTExcluir)
+                    .addComponent(BTPesquisar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -199,30 +201,38 @@ public class TelaCliente extends javax.swing.JFrame {
             cliente.setCPF(JTNome.getText());
             BancoJPA banco = new BancoJPA();
             banco.inserir(cliente);
-            
+
             JOptionPane.showMessageDialog(rootPane, "Cliente Adicionado");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(rootPane, "Erro ao Salvar");
         }
-        
+
 
     }//GEN-LAST:event_BTSalvarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void BTPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTPesquisarActionPerformed
 
-    private void JTNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTNomeActionPerformed
+    }//GEN-LAST:event_BTPesquisarActionPerformed
 
     private void JTEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEnderecoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTEnderecoActionPerformed
 
-    private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
+    private void BTAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAlterarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTEmailActionPerformed
+    }//GEN-LAST:event_BTAlterarActionPerformed
+
+    private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
+        // TODO add your handling code here:
+        Cliente cliente = new Cliente();
+        cliente.setName(JTNome.getText());
+            cliente.setEndereco(JTEndereco.getText());
+            cliente.setEmail(JTNome.getText());
+            cliente.setTelefone(JTNome.getText());
+            cliente.setCPF(JTNome.getText());
+            BancoJPA banco = new BancoJPA();
+            banco.excluir(cliente);
+    }//GEN-LAST:event_BTExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,6 +270,9 @@ public class TelaCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTAlterar;
+    private javax.swing.JButton BTExcluir;
+    private javax.swing.JButton BTPesquisar;
     private javax.swing.JButton BTSalvar;
     private javax.swing.JLabel JLCPF;
     private javax.swing.JLabel JLEmail;
@@ -270,9 +283,6 @@ public class TelaCliente extends javax.swing.JFrame {
     private javax.swing.JTextField JTEmail;
     private javax.swing.JTextField JTEndereco;
     private javax.swing.JTextField JTNome;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables

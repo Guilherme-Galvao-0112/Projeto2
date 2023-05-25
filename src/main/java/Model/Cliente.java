@@ -9,9 +9,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Cliente")
-public class Cliente {
+public class Cliente{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer Id;
     private String Name;
     private String Endereco;
