@@ -35,12 +35,11 @@ public class Funcionario implements Serializable {
     private String Email;
     private String Telefone;
     @OneToOne(cascade = {CascadeType.DETACH})
-    @JoinColumn(name="Cargo_ID")
+    @JoinColumn(name="ID")
     private Integer CargoID;
     @OneToMany(targetEntity = Usuarios.class)
     private String login;
     private Date DataDeNascimento;
-
 
     public Integer getID() {
         return ID;
