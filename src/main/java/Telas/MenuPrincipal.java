@@ -194,6 +194,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void BTFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTFuncionarioActionPerformed
         // TODO add your handling code here:
+        new TelaFuncionario(this,true).setVisible(true);
     }//GEN-LAST:event_BTFuncionarioActionPerformed
 
     private void BTCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCaixaActionPerformed

@@ -104,5 +104,9 @@ public class Funcionario implements Serializable {
     public void setDataDeNascimento(Date DataDeNascimento) {
         this.DataDeNascimento = DataDeNascimento;
     }
+
+    public void setDataNascimento(Date date) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
 
