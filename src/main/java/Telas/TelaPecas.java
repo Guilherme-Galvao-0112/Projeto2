@@ -33,20 +33,11 @@ public class TelaPecas extends javax.swing.JPanel {
         JLEndereco = new javax.swing.JLabel();
         JLEmail = new javax.swing.JLabel();
         JTEmail = new javax.swing.JTextField();
-        JLTelefone = new javax.swing.JLabel();
-        JLCPF = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        JLCPF1 = new javax.swing.JLabel();
-        JLCPF2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jTextField8 = new javax.swing.JTextField();
         BTSalvar1 = new javax.swing.JButton();
         BTAlterar1 = new javax.swing.JButton();
         BTExcluir1 = new javax.swing.JButton();
-        BTExcluir2 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         Tabela = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -57,17 +48,9 @@ public class TelaPecas extends javax.swing.JPanel {
 
         JLNome.setText("Nome");
 
-        JLEndereco.setText("Referência");
+        JLEndereco.setText("Salario");
 
-        JLEmail.setText("Marca");
-
-        JLTelefone.setText("Aplicação");
-
-        JLCPF.setText("Valor de compra ");
-
-        JLCPF1.setText("Valor de Venda ");
-
-        JLCPF2.setText("Quantidade");
+        JLEmail.setText("Comissão ");
 
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Segoe UI Variable", 0, 18)); // NOI18N
@@ -96,14 +79,6 @@ public class TelaPecas extends javax.swing.JPanel {
             }
         });
 
-        BTExcluir2.setText("Buscar");
-        BTExcluir2.setActionCommand("Buscar");
-        BTExcluir2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTExcluir2ActionPerformed(evt);
-            }
-        });
-
         Tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -122,93 +97,61 @@ public class TelaPecas extends javax.swing.JPanel {
         JPanePrincipalLayout.setHorizontalGroup(
             JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JLEndereco)
                     .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JLTelefone)
-                            .addComponent(JLCPF)
                             .addComponent(JLEmail)
                             .addComponent(JLNome)
-                            .addComponent(JLCPF1)
-                            .addComponent(JLCPF2))))
-                .addGap(12, 12, 12)
-                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(JTEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JTEndereco, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JTNome, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JLEndereco))
+                        .addGap(50, 50, 50)
+                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41))
-                            .addComponent(jTextField8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24))))
-            .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BTSalvar1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BTAlterar1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BTExcluir1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BTExcluir2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(JTEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                    .addComponent(JTEndereco, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JTNome, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanePrincipalLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(565, 565, 565))))
+                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanePrincipalLayout.createSequentialGroup()
+                        .addComponent(BTSalvar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BTAlterar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BTExcluir1)
+                        .addGap(442, 442, 442))))
         );
         JPanePrincipalLayout.setVerticalGroup(
             JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanePrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JLNome)
-                            .addComponent(JTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6)
-                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JLEndereco)
-                            .addComponent(JTEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(16, 16, 16)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JLNome)
+                    .addComponent(JTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JLEndereco)
+                    .addComponent(JTEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JLEmail))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPanePrincipalLayout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JLCPF))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JLCPF1)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(JLTelefone))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLCPF2)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTSalvar1)
                     .addComponent(BTAlterar1)
-                    .addComponent(BTExcluir1)
-                    .addComponent(BTExcluir2))
-                .addContainerGap(93, Short.MAX_VALUE))
+                    .addComponent(BTSalvar1)
+                    .addComponent(BTExcluir1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jTextArea1.setColumns(20);
@@ -342,26 +285,17 @@ public class TelaPecas extends javax.swing.JPanel {
         banco.excluir(cliente);
     }//GEN-LAST:event_BTExcluir1ActionPerformed
 
-    private void BTExcluir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluir2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BTExcluir2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTAlterar;
     private javax.swing.JButton BTAlterar1;
     private javax.swing.JButton BTExcluir;
     private javax.swing.JButton BTExcluir1;
-    private javax.swing.JButton BTExcluir2;
     private javax.swing.JButton BTSalvar;
     private javax.swing.JButton BTSalvar1;
-    private javax.swing.JLabel JLCPF;
-    private javax.swing.JLabel JLCPF1;
-    private javax.swing.JLabel JLCPF2;
     private javax.swing.JLabel JLEmail;
     private javax.swing.JLabel JLEndereco;
     private javax.swing.JLabel JLNome;
-    private javax.swing.JLabel JLTelefone;
     private javax.swing.JPanel JPanePrincipal;
     private javax.swing.JTextField JTEmail;
     private javax.swing.JTextField JTEndereco;
@@ -372,9 +306,5 @@ public class TelaPecas extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }
