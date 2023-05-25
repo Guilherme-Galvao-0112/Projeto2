@@ -8,6 +8,7 @@ package Model;
  *
  * @author dell
  */
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -25,8 +26,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Funcionario")
-public class Funcionario {
-    
+public class Funcionario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer ID;
@@ -34,11 +34,76 @@ public class Funcionario {
     private String Endereco;
     private String Email;
     private String Telefone;
-    @OneToOne(cascade = ({CascadeType.DETACH)})
-    @JoinColumn(name= Id)
+    @OneToOne(cascade = {CascadeType.DETACH})
+    @JoinColumn(name="Cargo_ID")
     private Integer CargoID;
     @OneToMany(targetEntity = Usuarios.class)
     private String login;
     private Date DataDeNascimento;
+
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String Nome) {
+        this.Nome = Nome;
+    }
+
+    public String getEndereco() {
+        return Endereco;
+    }
+
+    public void setEndereco(String Endereco) {
+        this.Endereco = Endereco;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public String getTelefone() {
+        return Telefone;
+    }
+
+    public void setTelefone(String Telefone) {
+        this.Telefone = Telefone;
+    }
+
+    public Integer getCargoID() {
+        return CargoID;
+    }
+
+    public void setCargoID(Integer CargoID) {
+        this.CargoID = CargoID;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public Date getDataDeNascimento() {
+        return DataDeNascimento;
+    }
+
+    public void setDataDeNascimento(Date DataDeNascimento) {
+        this.DataDeNascimento = DataDeNascimento;
+    }
 }
 

@@ -13,17 +13,17 @@ import javax.persistence.Table;
 
 /**
  *
- * @author dell
+ * @author lucas
  */
 @Entity
-@Table(name = "Cargo")
-public class Cargo implements Serializable {
+@Table(name = "Caixa")
+public class Caixa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer ID;
-    private String Nome;
-    private Float Salario;
-    private Float Comissao;
+    private Float Entrada;
+    private Float Saida;
+    private Float ValorTotalCaixa;
 
     public Integer getID() {
         return ID;
@@ -33,29 +33,27 @@ public class Cargo implements Serializable {
         this.ID = ID;
     }
 
-    public String getNome() {
-        return Nome;
+    public Float getEntrada() {
+        return Entrada;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-    
-    public Float getSalario() {
-        return Salario;
+    public void setEntrada(Float Entrada) {
+        this.Entrada = Entrada;
     }
 
-    public void setSalario(Float Salario) {
-        this.Salario = Salario;
+    public Float getSaida() {
+        return Saida;
     }
 
-    public Float getComissao() {
-        return Comissao;
+    public void setSaida(Float Saida) {
+        this.Saida = Saida;
     }
 
-    public void setComissao(Float Comissao) {
-        this.Comissao = Comissao;
+    public Float getValorTotalCaixa() {
+        return ValorTotalCaixa;
     }
 
-  
+    public void setValorTotalCaixa(Float ValorTotalCaixa) {
+        this.ValorTotalCaixa = ValorTotalCaixa;
+    }
 }

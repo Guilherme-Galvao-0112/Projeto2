@@ -1,7 +1,18 @@
 
 package Model;
 
-public class Servicos {
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Servicos")
+public class Servicos implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer ID;
     private String Descricao;
     private Integer Quantidade;

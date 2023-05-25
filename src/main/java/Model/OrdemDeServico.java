@@ -13,17 +13,15 @@ import javax.persistence.Table;
 
 /**
  *
- * @author dell
+ * @author lucas
  */
 @Entity
-@Table(name = "Cargo")
-public class Cargo implements Serializable {
+@Table(name = "OrdemDeServico")
+public class OrdemDeServico implements Serializable {    
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer ID;
-    private String Nome;
-    private Float Salario;
-    private Float Comissao;
+
 
     public Integer getID() {
         return ID;
@@ -32,30 +30,7 @@ public class Cargo implements Serializable {
     public void setID(Integer ID) {
         this.ID = ID;
     }
-
-    public String getNome() {
-        return Nome;
-    }
-
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
     
-    public Float getSalario() {
-        return Salario;
-    }
-
-    public void setSalario(Float Salario) {
-        this.Salario = Salario;
-    }
-
-    public Float getComissao() {
-        return Comissao;
-    }
-
-    public void setComissao(Float Comissao) {
-        this.Comissao = Comissao;
-    }
-
-  
+    
+    
 }
