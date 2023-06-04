@@ -197,28 +197,25 @@ public class TelaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void atualiza() {
-        String[] ColumNames = new String[]{"ID","Nome","Endereço","Email","Telefone","CPF"};
-           BancoJPA banco = new BancoJPA();
-           Cliente c = new Cliente();
-           List<Cliente> dados = banco.listar(c);
-           
-           
-           
-           Object[][] data = new Object[dados.size()][ColumNames.length];
-           
-           for(int i = 0; i <dados.size(); i++){
-               data[i][0]=dados.get(i).getId();
-               data[i][1]=dados.get(i).getName();
-               data[i][2]=dados.get(i).getEndereco();
-               data[i][3]=dados.get(i).getEmail();
-               data[i][4]=dados.get(i).getTelefone();
-               data[i][5]=dados.get(i).getCPF();
-           }
-           
-           DefaultTableModel modelo = new DefaultTableModel(data, ColumNames);
-           Tabela.setModel(modelo);
+        String[] ColumNames = new String[]{"ID", "Nome", "Endereço", "Email", "Telefone", "CPF"};
+        BancoJPA banco = new BancoJPA();
+        Cliente c = new Cliente();
+        List<Cliente> dados = banco.listar(c);
 
-             
+        Object[][] data = new Object[dados.size()][ColumNames.length];
+
+        for (int i = 0; i < dados.size(); i++) {
+            data[i][0] = dados.get(i).getId();
+            data[i][1] = dados.get(i).getName();
+            data[i][2] = dados.get(i).getEndereco();
+            data[i][3] = dados.get(i).getEmail();
+            data[i][4] = dados.get(i).getTelefone();
+            data[i][5] = dados.get(i).getCPF();
+        }
+
+        DefaultTableModel modelo = new DefaultTableModel(data, ColumNames);
+        Tabela.setModel(modelo);
+
     }
     private void BTSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTSalvarActionPerformed
         if (evt.getSource().equals(BTSalvar)) {
@@ -244,15 +241,19 @@ public class TelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BTAlterarActionPerformed
 
     private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
-        // TODO add your handling code here:
-        Cliente cliente = new Cliente();
-        cliente.setName(JTNome.getText());
-        cliente.setEndereco(JTEndereco.getText());
-        cliente.setEmail(JTNome.getText());
-        cliente.setTelefone(JTNome.getText());
-        cliente.setCPF(JTNome.getText());
-        BancoJPA banco = new BancoJPA();
-        banco.excluir(cliente);
+        if (evt.getSource().equals(BTExcluir)) {
+            Cliente cliente = new Cliente();
+                String nID = JOptionPane.showInputDialog( "Informe o ID a ser Excluido");
+                int ID = Integer.parseInt(nID);
+                cliente.setId(ID);
+                
+                BancoJPA banco = new BancoJPA();
+                banco.remove(cliente);
+                atualiza();
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Erro");
+        }
+        
     }//GEN-LAST:event_BTExcluirActionPerformed
 
     /**

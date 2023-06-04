@@ -26,6 +26,11 @@ public class BancoJPA {
         em.close();
     }
     
+    public void removeid(Object o, int id){
+        Query query = em.createQuery(
+        "DELETE FROM "+o.getClass().getSimpleName()+" WHERE "+o.getClass().getSimpleName()+".id = "+id);
+        }   
+    
     public void update(Object o){
         etx.begin();
         em.merge(o);
@@ -38,17 +43,6 @@ public class BancoJPA {
          return query.getResultList();
     }
     
-    public void excluir (Object o){
-        etx.begin();
-        em.remove(o);
-        etx.commit();
-        em.close();
-    }
-    public void editar (Object o){
-        etx.begin();
-        em.merge(o);
-        etx.commit();
-        em.close();
-    }
+    
 }
 
