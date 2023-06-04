@@ -4,6 +4,8 @@
  */
 package Telas;
 
+import Telas.TelaProdutos.TelaProdutos;
+
 /**
  *
  * @author dell
@@ -186,7 +188,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BTVeiculoActionPerformed
 
     private void BTProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTProdutosActionPerformed
-        // TODO add your handling code here:
+        new TelaProdutos(this,true).setVisible(true);
     }//GEN-LAST:event_BTProdutosActionPerformed
 
     private void BTOrcamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTOrcamentoActionPerformed
