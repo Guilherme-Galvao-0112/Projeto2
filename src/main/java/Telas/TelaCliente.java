@@ -51,6 +51,7 @@ public class TelaCliente extends javax.swing.JFrame {
         BTExcluir = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        BTVoltar = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabela = new javax.swing.JTable();
 
@@ -84,6 +85,13 @@ public class TelaCliente extends javax.swing.JFrame {
         BTExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTExcluirActionPerformed(evt);
+            }
+        });
+
+        BTVoltar.setText("Voltar");
+        BTVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTVoltarActionPerformed(evt);
             }
         });
 
@@ -122,7 +130,9 @@ public class TelaCliente extends javax.swing.JFrame {
                         .addComponent(BTAlterar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BTExcluir)
-                        .addGap(54, 128, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BTVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         JPanePrincipalLayout.setVerticalGroup(
             JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +165,8 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTSalvar)
                     .addComponent(BTAlterar)
-                    .addComponent(BTExcluir))
+                    .addComponent(BTExcluir)
+                    .addComponent(BTVoltar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -177,11 +188,13 @@ public class TelaCliente extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JPanePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(JPanePrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(78, 78, 78))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 48, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,6 +269,10 @@ public class TelaCliente extends javax.swing.JFrame {
         
     }//GEN-LAST:event_BTExcluirActionPerformed
 
+    private void BTVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVoltarActionPerformed
+        dispose();
+    }//GEN-LAST:event_BTVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -264,6 +281,7 @@ public class TelaCliente extends javax.swing.JFrame {
     private javax.swing.JButton BTAlterar;
     private javax.swing.JButton BTExcluir;
     private javax.swing.JButton BTSalvar;
+    private javax.swing.JToggleButton BTVoltar;
     private javax.swing.JLabel JLCPF;
     private javax.swing.JLabel JLEmail;
     private javax.swing.JLabel JLEndereco;

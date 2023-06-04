@@ -20,12 +20,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-/**
- *
- * @author dell
- */
+
 @Entity
 @Table(name = "Funcionario")
+
 public class Funcionario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -34,13 +32,15 @@ public class Funcionario implements Serializable {
     private String Endereco;
     private String Email;
     private String Telefone;
+    private Date DataDeNascimento;
+    /*
     @OneToOne(cascade = {CascadeType.DETACH})
     @JoinColumn(name="ID")
     private Integer CargoID;
     @OneToMany(targetEntity = Usuarios.class)
     private String login;
-    private Date DataDeNascimento;
-
+    
+*/
     public Integer getID() {
         return ID;
     }
@@ -80,23 +80,6 @@ public class Funcionario implements Serializable {
     public void setTelefone(String Telefone) {
         this.Telefone = Telefone;
     }
-
-    public Integer getCargoID() {
-        return CargoID;
-    }
-
-    public void setCargoID(Integer CargoID) {
-        this.CargoID = CargoID;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
     public Date getDataDeNascimento() {
         return DataDeNascimento;
     }
