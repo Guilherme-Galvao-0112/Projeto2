@@ -1,9 +1,7 @@
-Telas\TelaCliente$3.class
 Telas\TelaCliente.class
-Model\Usuarios.class
 Telas\TelaCliente$2.class
-Model\Cliente.class
 Telas\TelaCliente$1.class
-Model\Cargo.class
+Model\Cliente.class
 Banco\BancoJPA.class
-Telas\TelaCliente$4.class
+Telas\TelaCliente$3.class
+Model\Usuarios.class
