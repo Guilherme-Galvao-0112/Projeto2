@@ -4,6 +4,9 @@
  */
 package Telas;
 
+import Telas.Servicos.TelaGerenciaServico;
+import Telas.Servicos.TelaListaServicos;
+
 /**
  *
  * @author lucas
@@ -33,7 +36,7 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
         jTextPane2 = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
         Tabela = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        AddServico = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -67,10 +70,10 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(Tabela);
 
-        jButton2.setText("Adicionar Serviço");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        AddServico.setText("Adicionar Serviço");
+        AddServico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                AddServicoActionPerformed(evt);
             }
         });
 
@@ -121,7 +124,7 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jButton2)
+                                .addComponent(AddServico)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -139,7 +142,7 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(AddServico)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
@@ -162,9 +165,8 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void AddServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddServicoActionPerformed
+        new TelaListaServicos(this, true).setVisible(true);    }//GEN-LAST:event_AddServicoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -181,6 +183,7 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddServico;
     private javax.swing.JLabel JLEndereco;
     private javax.swing.JLabel JLNome;
     private javax.swing.JTextField JTEmail;
@@ -188,7 +191,6 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
     private javax.swing.JTextField JTNome;
     private javax.swing.JTable Tabela;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
