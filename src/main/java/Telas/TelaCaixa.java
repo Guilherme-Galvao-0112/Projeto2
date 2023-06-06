@@ -13,7 +13,7 @@ public class TelaCaixa extends javax.swing.JFrame {
     /**
      * Creates new form TelaCaixa
      */
-    public TelaCaixa() {
+    public TelaCaixa(MenuPrincipal aThis, boolean par) {
         initComponents();
     }
 
@@ -115,7 +115,7 @@ public class TelaCaixa extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCaixa().setVisible(true);
+                new TelaCaixa(this, true).setVisible(true);
             }
         });
     }

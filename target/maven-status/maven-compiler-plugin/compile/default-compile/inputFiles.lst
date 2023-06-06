@@ -1,12 +1,12 @@
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Model\Funcionario.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Padrao\Repository.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\Estoque.java
+C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaProdutos\TelaProdutos.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Padrao\InterfacePadrao.java
-C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Main\SistemaOficina.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Model\Usuarios.java
-C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaPecas.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaOrcamento.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Model\OrdemDeServico.java
+C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaProdutos\TelaListarProdutos.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaCaixa.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Padrao\PadraoListar.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Model\Servicos.java
@@ -23,5 +23,6 @@ C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaLo
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Padrao\PadraoListagem.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\MenuPrincipal.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Model\Veiculo.java
+C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\SistemaOficina\SistemaOficina.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Telas\TelaOrdemDeServico.java
 C:\Users\dell\Documents\Programação\GitHub\Projeto2\src\main\java\Banco\BancoJPA.java

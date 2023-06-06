@@ -27,6 +27,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaCliente
+     * 
      */
     public TelaFuncionario(MenuPrincipal aThis, boolean par) {
         initComponents();

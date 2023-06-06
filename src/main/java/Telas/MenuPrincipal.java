@@ -184,7 +184,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BTClienteActionPerformed
 
     private void BTVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVeiculoActionPerformed
-        
+        new TelaVeiculo(this,true).setVisible(true);
     }//GEN-LAST:event_BTVeiculoActionPerformed
 
     private void BTProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTProdutosActionPerformed
@@ -192,7 +192,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BTProdutosActionPerformed
 
     private void BTOrcamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTOrcamentoActionPerformed
-       
+       new TelaOrcamento(this,true).setVisible(true);
     }//GEN-LAST:event_BTOrcamentoActionPerformed
 
     private void BTFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTFuncionarioActionPerformed
@@ -202,14 +202,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void BTCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCaixaActionPerformed
         // TODO add your handling code here:
+        new TelaCaixa(this,true).setVisible(true);
     }//GEN-LAST:event_BTCaixaActionPerformed
 
     private void BTUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTUsuariosActionPerformed
         // TODO add your handling code here:
+        new TelaUsuario(this,true).setVisible(true);
     }//GEN-LAST:event_BTUsuariosActionPerformed
 
     private void BTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTOSActionPerformed
         // TODO add your handling code here:
+        new TelaOrdemDeServico(this,true).setVisible(true);
     }//GEN-LAST:event_BTOSActionPerformed
 
 

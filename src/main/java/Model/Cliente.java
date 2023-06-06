@@ -13,7 +13,6 @@ import javax.persistence.GeneratedValue;
 
 @Entity
 @Table(name = "Cliente")
-
 public class Cliente implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

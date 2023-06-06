@@ -23,7 +23,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Funcionario")
-
 public class Funcionario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -13,7 +13,7 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
     /**
      * Creates new form TelaOrdemDeServico
      */
-    public TelaOrdemDeServico() {
+    public TelaOrdemDeServico(MenuPrincipal aThis, boolean par) {
         initComponents();
     }
 
@@ -186,7 +186,7 @@ public class TelaOrdemDeServico extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaOrdemDeServico().setVisible(true);
+                new TelaOrdemDeServico(this, true).setVisible(true);
             }
         });
     }
