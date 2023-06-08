@@ -24,15 +24,9 @@ import javax.swing.table.DefaultTableModel;
  * @author dell
  */
 public class TelaFuncionario extends javax.swing.JFrame {
-
-    /**
-     * Creates new form TelaCliente
-     * 
-     */
     public TelaFuncionario(MenuPrincipal aThis, boolean par) {
         initComponents();
         atualiza();
-
     }
 
     @SuppressWarnings("unchecked")
@@ -231,7 +225,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
             funcionario.setEndereco(JTEndereco.getText());
             funcionario.setEmail(JTEmail.getText());
             funcionario.setTelefone(JTTelefone.getText());
-            //funcionario.setDataDeNascimento(new Date(JTDNS.getText()));
+            funcionario.setDataDeNascimento(new Date(JTDNS.getText()));
             BancoJPA banco = new BancoJPA();
             banco.inserir(funcionario);
             atualiza();

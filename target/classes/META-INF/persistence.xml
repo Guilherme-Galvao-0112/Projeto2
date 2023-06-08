@@ -3,7 +3,6 @@
   <persistence-unit name="BDOficina" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>Model.Cliente</class>
-    <class>Model.Funcionario</class>
     <class>Model.Caixa</class>
     <class>Model.Cargo</class>
     <class>Model.Orcamento</class>
@@ -12,6 +11,7 @@
     <class>Model.Servicos</class>
     <class>Model.Usuarios</class>
     <class>Model.Veiculo</class>
+    <class>Model.Funcionario</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>

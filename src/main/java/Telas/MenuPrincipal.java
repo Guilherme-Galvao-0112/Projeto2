@@ -15,9 +15,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     /**@
      * Creates new form MenuPrincipal
      */
-    public MenuPrincipal(TelaLogin aThis, boolean par) {
+    public MenuPrincipal(TelaLogin aThis, boolean par){
         initComponents();
-        new TelaLogin().setVisible(false);
     }
 
     /**
