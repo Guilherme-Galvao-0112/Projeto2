@@ -80,9 +80,9 @@
                           </Group>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="JTEmail" alignment="0" pref="199" max="32767" attributes="0"/>
-                              <Component id="jTextField5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JTTelefone" alignment="0" max="32767" attributes="0"/>
                               <Component id="JTEndereco" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JTCPF" alignment="0" max="32767" attributes="0"/>
                               <Component id="JTNome" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -126,12 +126,12 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="JTTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="JLTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="JTCPF" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="JLCPF" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -204,9 +204,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTExcluirActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
+        <Component class="javax.swing.JTextField" name="JTTelefone">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField6">
+        <Component class="javax.swing.JTextField" name="JTCPF">
         </Component>
         <Component class="javax.swing.JToggleButton" name="BTVoltar">
           <Properties>

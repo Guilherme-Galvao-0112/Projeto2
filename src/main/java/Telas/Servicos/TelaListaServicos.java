@@ -115,7 +115,8 @@ public class TelaListaServicos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
      private void GerenciarServicos_btActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        new TelaGerenciaServico(this, true).setVisible(true);    }   
+        new TelaGerenciaServico(this, true).setVisible(true);    
+     }   
     /**
      * @param args the command line arguments
      */

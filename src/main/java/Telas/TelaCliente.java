@@ -49,8 +49,8 @@ public class TelaCliente extends javax.swing.JFrame {
         BTSalvar = new javax.swing.JButton();
         BTAlterar = new javax.swing.JButton();
         BTExcluir = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        JTTelefone = new javax.swing.JTextField();
+        JTCPF = new javax.swing.JTextField();
         BTVoltar = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabela = new javax.swing.JTable();
@@ -119,9 +119,9 @@ public class TelaCliente extends javax.swing.JFrame {
                                 .addGap(24, 24, 24)))
                         .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(JTEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JTTelefone, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JTEndereco, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JTCPF, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JTNome, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(JPanePrincipalLayout.createSequentialGroup()
@@ -155,11 +155,11 @@ public class TelaCliente extends javax.swing.JFrame {
                             .addComponent(JLEmail))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JLTelefone))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JLCPF))))
                 .addGap(18, 18, 18)
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -235,9 +235,9 @@ public class TelaCliente extends javax.swing.JFrame {
             Cliente cliente = new Cliente();
             cliente.setName(JTNome.getText());
             cliente.setEndereco(JTEndereco.getText());
-            cliente.setEmail(JTNome.getText());
-            cliente.setTelefone(JTNome.getText());
-            cliente.setCPF(JTNome.getText());
+            cliente.setEmail(JTEmail.getText());
+            cliente.setTelefone(JTTelefone.getText());
+            cliente.setCPF(JTCPF.getText());
             BancoJPA banco = new BancoJPA();
             banco.inserir(cliente);
             atualiza();
@@ -288,12 +288,12 @@ public class TelaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel JLNome;
     private javax.swing.JLabel JLTelefone;
     private javax.swing.JPanel JPanePrincipal;
+    private javax.swing.JTextField JTCPF;
     private javax.swing.JTextField JTEmail;
     private javax.swing.JTextField JTEndereco;
     private javax.swing.JTextField JTNome;
+    private javax.swing.JTextField JTTelefone;
     private javax.swing.JTable Tabela;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }

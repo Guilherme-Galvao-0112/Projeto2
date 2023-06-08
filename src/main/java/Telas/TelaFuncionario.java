@@ -50,7 +50,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
         BTSalvar = new javax.swing.JButton();
         BTAlterar = new javax.swing.JButton();
         BTExcluir = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
+        JTTelefone = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         JTDNS = new javax.swing.JTextField();
         BTVoltar = new javax.swing.JButton();
@@ -124,7 +124,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                             .addComponent(JTEndereco)
                             .addComponent(JTNome, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                             .addComponent(JTEmail)
-                            .addComponent(jTextField5)
+                            .addComponent(JTTelefone)
                             .addComponent(JTDNS))
                         .addContainerGap(286, Short.MAX_VALUE))
                     .addGroup(JPanePrincipalLayout.createSequentialGroup()
@@ -154,7 +154,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                     .addComponent(JLEmail))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JLTelefone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -229,9 +229,9 @@ public class TelaFuncionario extends javax.swing.JFrame {
             Funcionario funcionario = new Funcionario();
             funcionario.setNome(JTNome.getText());
             funcionario.setEndereco(JTEndereco.getText());
-            funcionario.setEmail(JTNome.getText());
-            funcionario.setTelefone(JTNome.getText());
-            funcionario.setDataNascimento(new Date(JTDNS.getText()));
+            funcionario.setEmail(JTEmail.getText());
+            funcionario.setTelefone(JTTelefone.getText());
+            //funcionario.setDataDeNascimento(new Date(JTDNS.getText()));
             BancoJPA banco = new BancoJPA();
             banco.inserir(funcionario);
             atualiza();
@@ -279,9 +279,9 @@ public class TelaFuncionario extends javax.swing.JFrame {
     private javax.swing.JTextField JTEmail;
     private javax.swing.JTextField JTEndereco;
     private javax.swing.JTextField JTNome;
+    private javax.swing.JTextField JTTelefone;
     private javax.swing.JTable Tabela;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
