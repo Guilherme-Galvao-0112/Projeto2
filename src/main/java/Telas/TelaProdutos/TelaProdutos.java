@@ -193,7 +193,8 @@ public class TelaProdutos extends javax.swing.JFrame {
                 produto.setReferencia(JTReferencia.getText());
                 produto.setMarca(JTMarca.getText());
                 produto.setAplicacao(JTAplicacao.getText());
-                produto.setValorCompra(JTValorC.getText());
+                Double ValorFcompra= Double.valueOf(JTValorC.getText());
+                produto.setValorCompra(ValorFcompra);
                 
             }
         /*
