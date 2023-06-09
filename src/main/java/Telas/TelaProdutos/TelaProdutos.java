@@ -179,7 +179,7 @@ public class TelaProdutos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTPesquisarActionPerformed
-
+        new TelaListarProdutos(this,true).setVisible(true);
     }//GEN-LAST:event_BTPesquisarActionPerformed
 
     private void BTVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVoltarActionPerformed
