@@ -171,64 +171,6 @@ public class FuncionarioTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
-    /**
-     * Test of getCargoID method, of class Funcionario.
-     */
-    @Test
-    public void testGetCargoID() {
-        System.out.println("getCargoID");
-        Funcionario instance = new Funcionario();
-        Integer expResult = null;
-        Integer result = instance.getCargoID();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setCargoID method, of class Funcionario.
-     */
-    @Test
-    public void testSetCargoID() {
-        System.out.println("setCargoID");
-        Integer CargoID = null;
-        Funcionario instance = new Funcionario();
-        instance.setCargoID(CargoID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getLogin method, of class Funcionario.
-     */
-    @Test
-    public void testGetLogin() {
-        System.out.println("getLogin");
-        Funcionario instance = new Funcionario();
-        String expResult = "";
-        String result = instance.getLogin();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setLogin method, of class Funcionario.
-     */
-    @Test
-    public void testSetLogin() {
-        System.out.println("setLogin");
-        String login = "";
-        Funcionario instance = new Funcionario();
-        instance.setLogin(login);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getDataDeNascimento method, of class Funcionario.
-     */
     @Test
     public void testGetDataDeNascimento() {
         System.out.println("getDataDeNascimento");

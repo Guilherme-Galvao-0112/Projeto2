@@ -102,7 +102,7 @@ public class TelaLogin extends javax.swing.JFrame {
     private void BTEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTEnviarActionPerformed
         dispose();
         new MenuPrincipal(this,true).setVisible(true);
-        
+
     }//GEN-LAST:event_BTEnviarActionPerformed
 
     private void BTCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCancelarActionPerformed

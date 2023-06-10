@@ -6,9 +6,6 @@ package Telas;
 
 import Banco.BancoJPA;
 import Model.Cliente;
-import Padrao.PadraoListagem;
-import Padrao.PadraoListar;
-import Padrao.Repository;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.util.List;

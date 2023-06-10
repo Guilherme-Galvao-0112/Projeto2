@@ -169,14 +169,7 @@ public class TelaCargo extends javax.swing.JPanel {
 
     private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
         // TODO add your handling code here:
-        Cliente cliente = new Cliente();
-        cliente.setName(JTNome.getText());
-        cliente.setEndereco(JTEndereco.getText());
-        cliente.setEmail(JTNome.getText());
-        cliente.setTelefone(JTNome.getText());
-        cliente.setCPF(JTNome.getText());
-        BancoJPA banco = new BancoJPA();
-        banco.excluir(cliente);
+        
     }//GEN-LAST:event_BTExcluirActionPerformed
 
     private void BTAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAlterarActionPerformed
@@ -184,20 +177,7 @@ public class TelaCargo extends javax.swing.JPanel {
     }//GEN-LAST:event_BTAlterarActionPerformed
 
     private void BTSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTSalvarActionPerformed
-        if (evt.getSource().equals(BTSalvar)) {
-            Cliente cliente = new Cliente();
-            cliente.setName(JTNome.getText());
-            cliente.setEndereco(JTEndereco.getText());
-            cliente.setEmail(JTNome.getText());
-            cliente.setTelefone(JTNome.getText());
-            cliente.setCPF(JTNome.getText());
-            BancoJPA banco = new BancoJPA();
-            banco.inserir(cliente);
-            atualiza();
-            JOptionPane.showMessageDialog(rootPane, "Cliente Adicionado");
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao Salvar");
-        }
+       
     }//GEN-LAST:event_BTSalvarActionPerformed
 
 
