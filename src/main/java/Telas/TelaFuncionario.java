@@ -84,12 +84,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
 
         jLabel2.setText("Data Nascimento");
 
-        JTDNS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTDNSActionPerformed(evt);
-            }
-        });
-
         BTVoltar.setText("Voltar");
         BTVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,17 +233,27 @@ public class TelaFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_BTSalvarActionPerformed
 
     private void BTAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAlterarActionPerformed
-        // TODO add your handling code here:
+        if (evt.getSource().equals(BTAlterar)) {
+            String nID = JOptionPane.showInputDialog("Informe o ID a ser alterado");
+            int ID = Integer.parseInt(nID);
+            Funcionario funcionario = new Funcionario();
+            funcionario.setID(ID);
+            funcionario.setNome(JTNome.getText());
+            funcionario.setEndereco(JTEndereco.getText());
+            funcionario.setEmail(JTEmail.getText());
+            funcionario.setTelefone(JTTelefone.getText());
+            funcionario.setDataDeNascimento(new Date(JTDNS.getText()));
+            BancoJPA banco = new BancoJPA();
+            banco.update(funcionario);
+            atualiza();
+            
+        }
     }//GEN-LAST:event_BTAlterarActionPerformed
 
     private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
         // TODO add your handling code here:
        
     }//GEN-LAST:event_BTExcluirActionPerformed
-
-    private void JTDNSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTDNSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTDNSActionPerformed
 
     private void BTVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVoltarActionPerformed
         dispose();

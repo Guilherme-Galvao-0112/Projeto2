@@ -278,14 +278,7 @@ public class TelaCliente extends javax.swing.JFrame {
             String nID = JOptionPane.showInputDialog("Informe o ID a ser Excluido");
             int ID = Integer.parseInt(nID);
             Cliente cliente = new Cliente();
-            BancoJPA banco = new BancoJPA();
-            cliente.setId(ID);
-            cliente.getName();
-            cliente.getEndereco();
-            cliente.getEmail();
-            cliente.getTelefone();
-            cliente.getCPF();
-            
+            BancoJPA banco = new BancoJPA(); 
             banco.remove(cliente);
             atualiza();
         } else {
