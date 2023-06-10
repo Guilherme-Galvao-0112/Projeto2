@@ -4,8 +4,10 @@
  */
 package Telas.TelaProdutos;
 
+import Banco.BancoJPA;
 import Model.Pecas;
 import Telas.MenuPrincipal;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -186,6 +188,16 @@ public class TelaProdutos extends javax.swing.JFrame {
       dispose();
     }//GEN-LAST:event_BTVoltarActionPerformed
 
+    
+    private void clear() {
+        JTDescricao.setText("");
+        JTReferencia.setText("");
+        JTMarca.setText("");
+        JTAplicacao.setText("");
+        JTValorC.setText("");
+        JTValorV.setText("");
+        JTQuantidade.setText("");
+    }
     private void BTIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTIncluirActionPerformed
             if(evt.getSource().equals(BTIncluir)){
                 Pecas produto = new Pecas();
@@ -193,26 +205,14 @@ public class TelaProdutos extends javax.swing.JFrame {
                 produto.setReferencia(JTReferencia.getText());
                 produto.setMarca(JTMarca.getText());
                 produto.setAplicacao(JTAplicacao.getText());
-                Double ValorFcompra= Double.valueOf(JTValorC.getText());
-                produto.setValorCompra(ValorFcompra);
-                
+                produto.setValorCompra(Double.valueOf(JTValorC.getText()));
+                produto.setValorVenda(Double.valueOf(JTValorV.getText()));
+                produto.setQuantidade(Integer.valueOf(JTQuantidade.getText()));
+                BancoJPA banco = new BancoJPA();
+                banco.inserir(produto);
+                clear();
+                JOptionPane.showMessageDialog(rootPane, "Produto Adcionado");
             }
-        /*
-        if (evt.getSource().equals(BTSalvar)) {
-            Cliente cliente = new Cliente();
-            cliente.setName(JTNome.getText());
-            cliente.setEndereco(JTEndereco.getText());
-            cliente.setEmail(JTEmail.getText());
-            cliente.setTelefone(JTTelefone.getText());
-            cliente.setCPF(JTCPF.getText());
-            BancoJPA banco = new BancoJPA();
-            banco.inserir(cliente);
-            atualiza();
-            JOptionPane.showMessageDialog(rootPane, "Cliente Adicionado");
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao Salvar");
-        }
-*/
     }//GEN-LAST:event_BTIncluirActionPerformed
 
     /**
