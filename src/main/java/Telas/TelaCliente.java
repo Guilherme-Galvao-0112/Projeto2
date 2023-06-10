@@ -206,6 +206,14 @@ public class TelaCliente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    private void clear() {
+        JTNome.setText("");
+        JTEndereco.setText("");
+        JTEmail.setText("");
+        JTTelefone.setText("");
+        JTCPF.setText("");
+
+    }
 
     private void atualiza() {
         String[] ColumNames = new String[]{"ID", "Nome", "Endereço", "Email", "Telefone", "CPF"};
@@ -238,6 +246,7 @@ public class TelaCliente extends javax.swing.JFrame {
             cliente.setCPF(JTCPF.getText());
             BancoJPA banco = new BancoJPA();
             banco.inserir(cliente);
+            clear();
             atualiza();
             JOptionPane.showMessageDialog(rootPane, "Cliente Adicionado");
         } else {
@@ -248,23 +257,41 @@ public class TelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BTSalvarActionPerformed
 
     private void BTAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAlterarActionPerformed
-        // TODO add your handling code here:
+        if (evt.getSource().equals(BTAlterar)) {
+            String nID = JOptionPane.showInputDialog("Informe o ID a ser alterado");
+            int ID = Integer.parseInt(nID);
+            Cliente cliente = new Cliente();
+            cliente.setId(ID);
+            cliente.setName(JTNome.getText());
+            cliente.setEndereco(JTEndereco.getText());
+            cliente.setEmail(JTEmail.getText());
+            cliente.setTelefone(JTTelefone.getText());
+            cliente.setCPF(JTCPF.getText());
+            BancoJPA banco = new BancoJPA();
+            banco.update(cliente);
+            atualiza();
+        }
     }//GEN-LAST:event_BTAlterarActionPerformed
 
     private void BTExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTExcluirActionPerformed
         if (evt.getSource().equals(BTExcluir)) {
+            String nID = JOptionPane.showInputDialog("Informe o ID a ser Excluido");
+            int ID = Integer.parseInt(nID);
             Cliente cliente = new Cliente();
-                String nID = JOptionPane.showInputDialog( "Informe o ID a ser Excluido");
-                int ID = Integer.parseInt(nID);
-                cliente.setId(ID);
-                
-                BancoJPA banco = new BancoJPA();
-                banco.remove(cliente);
-                atualiza();
-        }else{
+            BancoJPA banco = new BancoJPA();
+            cliente.setId(ID);
+            cliente.getName();
+            cliente.getEndereco();
+            cliente.getEmail();
+            cliente.getTelefone();
+            cliente.getCPF();
+            
+            banco.remove(cliente);
+            atualiza();
+        } else {
             JOptionPane.showMessageDialog(rootPane, "Erro");
         }
-        
+
     }//GEN-LAST:event_BTExcluirActionPerformed
 
     private void BTVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVoltarActionPerformed
