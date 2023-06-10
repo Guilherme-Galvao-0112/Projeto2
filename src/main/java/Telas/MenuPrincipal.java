@@ -4,6 +4,7 @@
  */
 package Telas;
 
+import Telas.Veiculos.TelaVeiculo;
 import Telas.TelaProdutos.TelaProdutos;
 
 /**
